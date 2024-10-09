@@ -1,0 +1,10 @@
+version: '3'
+services:
+  oracle_db:
+    container_name: oracle_local
+    image: custom_oracle:latest
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    volumes:
+      - ./startup/scripts:/home/oracle/setup/custom_scripts
